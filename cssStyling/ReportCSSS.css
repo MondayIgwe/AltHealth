@@ -1,0 +1,37 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #fff; 
+    height: 400px;
+}
+.data{
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+}
+                   
+table{
+    border-collapse: collapse;
+    border-collapse:separate; 
+    border-spacing: 10px 1rem;
+    width:150px;
+    padding:5px;
+    color: #588c7e;
+    border:2px solid black;   
+    font-family: monospace;
+    font-size: 20px;
+    text-align: left;
+}
+th{
+    background-color: #588c7e;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}

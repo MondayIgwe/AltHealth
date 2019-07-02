@@ -1,0 +1,29 @@
+      table{
+                height: 250px;
+                margin-top: 150px;
+                border: 1px solid;
+                background-color: #eee;
+                width: 300px;
+               
+            }
+            td{
+                border: 0px;
+                padding: 10px;
+            }
+            th{
+                border-bottom: 1px solid;
+                background-color: #ddd;
+            } 
+            img{
+                border: 1px solid #000;
+                
+            }  
+            
+            #btn{
+                color: #fff;
+                background: #337ab7;
+                padding: 5px;
+                margin-left: 69%;
+                
+            } 
+            

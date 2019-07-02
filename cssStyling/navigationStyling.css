@@ -1,0 +1,32 @@
+ul li{
+    list-style:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    display: inline-block;
+}  
+nav{
+    width: 400%;
+    height:150px;
+  
+}
+a:link,a:visited{
+    display:block;
+    front-weight:bold;
+    color:#FFFFFF;
+    background-color: #98bf21;
+    width: 120px;
+    text-align:center;
+    padding: 20px;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+a:hover,a:active{
+    background-color:7A991A;
+}
+ul li a:hover{
+    color:red;
+}
+li{
+    float:left;
+}

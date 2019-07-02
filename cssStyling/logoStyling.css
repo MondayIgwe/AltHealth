@@ -1,0 +1,27 @@
+img{
+    max-height: 100%;
+    max-width: 100%;
+    float: right;
+    margin: 0;
+}
+.header{
+    background: #55d6aa;
+    height: 75px;
+    width: 1500px;
+    border: solid 2px #000;
+    color: white;
+}
+#nav{
+    background: black;
+    height: 50px;
+    width: 964px;
+    border: solid 2px #000;
+    font-weight: bold;
+}
+ul li{
+    list-style-type: none;
+    display: inline;
+    padding-top: 10px;
+    font-size: 20px;
+    background: solid 2px
+}
