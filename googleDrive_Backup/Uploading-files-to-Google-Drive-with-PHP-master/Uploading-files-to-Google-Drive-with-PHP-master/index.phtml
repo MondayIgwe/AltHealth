@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+         <title>Google Drive App</title>
+    </head>
+    <body style="background:url(images/clinic.jpg)no-repeat; background-size:100%;">
+        <ul>
+        <?php foreach ($files as $file) { ?>
+            <li><?php echo $file; ?></li>
+        <?php } ?>
+        </ul>
+        <form method="post" action="<?php echo $url; ?>">
+            <input type="submit" value="BackUp Database to GoogleDrive" name="submit">
+        </form>
+    </body>
+</html>

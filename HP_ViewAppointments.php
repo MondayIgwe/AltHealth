@@ -15,15 +15,19 @@
          <div class="header">
             <img src="images/logo.png" />
             <nav>
-                <ul>
+                <ul>   
                     <li style="margin-left: 2em"><a href="healthPractitioner.php">Back to:  Health Practitioner</a></li>
                     <li style="margin-left: 2em"><a href="Day_To_Day_Reporting.php">Go to: Generate Day To Day Reporting</a></li>
                     <li style="margin-left: 2em"><a href="MIS_Report.php">Go to: Generate MIS Reporting</a></li>
+                    <li style="margin-left: 2em"><a target="_blank" title="follow me on Twitter" href="https://www.twitter.com/lifehealthcare"><img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border></a></li>
+                    <li style="margin-left: 2em"><a target="_blank" title="follow me on facebook" href="https://www.facebook.com/lifehealthcare"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a></li> 
+                    <li style="margin-left: 2em"><a target="_blank" title="follow me on youtube" href="https://www.youtube.com/lifehealthcare"><img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a></li>
+                    <li style="margin-left: 2em"><a target="_blank" title="follow me on instagram" href="https://www.instagram.com/lifehealthcare"><img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a></li>
                 </ul>
-        </nav>
+           </nav>
         </div>
     </center>
-            <td><?php 
+        <td><?php 
         //Connect to Database server and select the database 
             $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
             $username = 'root';
