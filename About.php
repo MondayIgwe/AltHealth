@@ -148,16 +148,15 @@ var revapi8,
 </div><!-- END REVOLUTION SLIDER --></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1476304999487 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1476305012332"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="specialty-copy wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1477334928019"><div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  vc_custom_1551978232797" >
 <div class="wpb_wrapper">
-
-	</div>
-	</div>
-  </div>    
-  </div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix">
+</div>
+</div>
+ </div>    
+ </div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix">
 </div><div id="free-consultation" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1478028778201 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-3"><div class="vc_column-inner vc_custom_1475794162846"><div class="wpb_wrapper">
 <div  class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1476135954858  free-consult-img">		
 <figure class="wpb_wrapper vc_figure">
 <div class="vc_single_image-wrapper   vc_box_border_grey">
- <img width="734" height="734" 
+<img width="734" height="734" 
       src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/pediatrician_or_family_practitioner_ref_guide/650x350_pediatrician_or_family_practitioner_ref_guide.jpg?resize=650px:*" 
       class="vc_single_image-img attachment-full" alt="Photo of a child" 
       sizes="(max-width: 734px)100vw, 734px" /></div>
@@ -165,35 +164,27 @@ var revapi8,
 </div>
 <h2><span style="color: #003f8a;">Our purpose</span></h2>
 Life, health and care are enshrined in everything we do. We carry this emphasis through in our dedication to well-being and quality of life, clinical excellence in world-class facilities, quality service, respect and a spirit of giving to those entrusted to our care. With life at the core of everything we do, the critical components of health and care hold everything together. Our purpose is making life better. And we fulfil that purpose by means of our compassionate and patient-centric approach.
-
 <h2><span style="color: #003f8a;">Our Vision</span></h2>
 Our crystal-clear vision allows us to constantly move in the right direction: our vision is to be a market-leading, international, diversified healthcare provider. We are able to realise this vision as we support it with our four strategic pillars:
-
 <h2><span style="color: #003f8a;">Growth</span></h2>
-Grow our South African business, establish a sizeable international business, and diversify our sources of revenue.
- 
+Grow our South African business, establish a sizeable international business, and diversify our sources of revenue. 
 <h2><span style="color: #003f8a;">Efficiency</span></h2>
 Deliver cost-effective care by means of efficient, optimal utilisation of resources and processes.
-
 <h2><span style="color: #003f8a;">Quality</span></h2>
 Deliver market-leading quality care.
-
 <h2><span style="color: #003f8a;">Sustainability</span></h2>
 Effectively engage with our stakeholders to ensure our long-term sustainability. 
-
 <h2><span style="color: #003f8a;">Our mission</span></h2>
 We improve the lives of people by means of the delivery of high-quality, cost-effective care. We are always striving to do our best, and a good sign of our performance is our patient satisfaction, and our care is infused with layers of compassion, enabling us to grow.
-
 Our values form the cornerstone of how we behave – they are the essence of our culture and the unifying beliefs that connect us.
 <h2><span style="color: #003f8a;">Our five core values</span></h2>
-
-<h4>Passion for people:</h4> those that are the life of our business
-<h4>Qe:</h4> quality to the power of 'e' (ethics, excellence, empowerment, empathy, energy)
+<h4>Passion for people:</h4> Those that are the life of our business
+<h4>Qe:</h4><p> Quality to the power of 'e' (ethics, excellence, empowerment, empathy, energy)</p>
 <h4>Performance pride:</h4>We act for the right reasons, with quality in mind
 <h4>Personal care:</h4> adding the human touch
 <h4>Lifetime partnerships:</h4> with our patients at the very centre
 Thoughtfulness goes a long way, so we aim to leave a lasting impression of understanding, of meeting patients' needs, and really listening to them.
-            </p>
+           
         <hr />
 </div>
 <div id="text-48" class="widget_text"><h2 class="widget-title">Get In Touch</h2>			
