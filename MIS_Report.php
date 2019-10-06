@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>MIS_Reports</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
          <link rel="icon" type="image/png" href="images/logo.png" >
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyling.css"> 
         <link rel="stylesheet" type="text/css" href="cssStyling/ReportCSSS.css">
@@ -25,7 +27,7 @@
             </ul>
         </nav>
        </div>
-    </center><td>
+   <td>
          <h1 align="center">Management Information System Report</h1><br> 
           <table align="center">
               <button><input type="submit" name="Invoices" value="Client Invoices Report"/></button>
@@ -81,7 +83,7 @@
                 if(isset($_POST["Bookings"]))
                 {
                     $query = 'SELECT DISTINCT * FROM bookinginfo, clientdata
-                              WHERE clientdata.Client_id = bookinginfo.Client_id';
+                              WHERE clientdata.Client_id = bookinginfo.Client_booking_id';
                     $statement = $PDOdb->prepare($query);
                     $statement->execute();
                     $searchReport = $statement->fetchAll();
@@ -115,7 +117,7 @@
                 //Select Client Invoices
                 if(isset($_POST["searchPatients"]))
                 {
-                    $query = 'SELECT DISTINCT Appointment_Date, Client_id 
+                    $query = 'SELECT DISTINCT Appointment_Date, Client_booking_id 
                         FROM bookinginfo 
                         WHERE Appointment_Date <= CURRENT_DATE
                         ORDER BY Appointment_Date DESC';
@@ -131,11 +133,13 @@
                               '<th>Client Id</th></tr> ';
                          
                         echo "<tr><td>".$filterReport['Appointment_Date'].' '."</td><td>"
-                              .' '.$filterReport['Client_id']."</td></tr>";
+                              .' '.$filterReport['Client_booking_id']."</td></tr>";
                         }
                 }
 ?>
+       
           </table>
        </form>
+         </center>
     </body>
 </html>

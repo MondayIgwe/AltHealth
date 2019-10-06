@@ -1,17 +1,17 @@
 <?php
-//Connect to Database server and select the database 
-            $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-            $username = 'root';
-            $password = '';
-             $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>'; 
-       
-//Query the database for user
+    session_start();
+    if(!$_SESSION['auth']){
+        header('location:Admin_login');
+    }
+
+      //Connect to Life health Care Database  
+      require_once 'Connect_DB.php';
+      
+     //Query the database for user
     $query = $PDOdb->prepare("SELECT * FROM login;");
     $query->execute();
     
-//Fetch the username and password for login
+    //Fetch the username and password for login
     $rows = $query->fetchAll(PDO::FETCH_ASSOC);
     
        foreach($rows as $row){
@@ -32,8 +32,14 @@
         <img src="images/logo.png" />
         <nav>
            <ul>
+               <li style="margin-left: 2em"><a target="_blank" title="follow me on Twitter" href="https://www.twitter.com/lifehealthcare"><img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border></a></li>
+               <li style="margin-left: 2em"><a target="_blank" title="follow me on facebook" href="https://www.facebook.com/lifehealthcare"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a></li> 
+               <li style="margin-left: 2em"><a target="_blank" title="follow me on youtube" href="https://www.youtube.com/lifehealthcare"><img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a></li>
                <li style="margin-left: 2em"><a href="HP_BookAppointments.php">Book Appointments for a Patient</a></li>
-               <li style="margin-left: 2em"> <a href="HP_ViewAppointments.php">View Appointments</a></li>
+               <li style="margin-left: 2em"><a href="HP_ViewAppointments.php">View Appointments</a></li>
+               <li style="margin-left: 2em"><a href="Admin_add_new_patitent.php">Add a New Patient</a></li>
+               <li style="margin-left: 2em"> <a href="invoice.php">Generate Invoice</a></li>
+             
             </ul>
         </nav>
         </div>

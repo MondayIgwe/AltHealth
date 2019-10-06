@@ -5,6 +5,7 @@
         <link rel="icon" type="image/png" href="images/logo.png" >
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyling.css"> 
         <link rel="stylesheet" type="text/css" href="cssStyling/appointmentsStyleSheet.css"> 
+        <meta charset="UTF-8" />
     </head>
     <body style="background:url(images/appointments.png)no-repeat; background-size:100%;">
         <form action="Client_BookAppointment.php" method="post">
@@ -55,9 +56,7 @@
                 <option>Select Appointment Time</option>
                 <?php
                //Connect to Database server and select the database 
-                    $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-                    $username = 'root';
-                    $password = '';
+                    require_once 'Connect_DB.php';
             
                     $PDOdb = new PDO($dbhost, $username, $password);
                     $query = $PDOdb->prepare("SELECT * FROM bookinginfo;");
@@ -79,17 +78,7 @@ try
      {
 
         //Connect to Database server and select the database 
-            $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-            $username = 'root';
-            $password = '';
-            
-            $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>'; 
-                
-               } catch (Exception $ex) {
-                   echo ($ex ->getMessage());
-               }
+          require_once 'Connect_DB.php';
      
             //GET THE DATA FROM THE FORM
             $clientID = $_POST['Client_id'];
@@ -97,12 +86,11 @@ try
             $appTime = $_POST['Time'];
 
             //INSERT Appointments INTO THE TABLE
-            $PDOquery = "INSERT INTO `bookinginfo`(`Appointment_Date`, `Client_id`, `Time`) 
-                            VALUES (:Appointment_Date,:Client_id,:Time)";
+            $PDOquery = "INSERT INTO `bookinginfo`(`Appointment_Date`, `Client_booking_id`, `Time`) 
+                         VALUES (:Appointment_Date,:Client_booking_id,:Time)";
 
             $PDOresult= $PDOdb->prepare($PDOquery);
-
-            $PDOExec = $PDOresult->execute(array(":Client_id"=>$clientID,":Appointment_Date"=>$appDate,":Time"=>$appTime));
+            $PDOExec = $PDOresult->execute(array(":Client_booking_id"=>$clientID,":Appointment_Date"=>$appDate,":Time"=>$appTime));
             if($PDOExec)
             {
               echo 'Booking Appointment for'.' '.$clientID.' '.'  '.'has been received!'.'&nbsp;&nbsp;';
@@ -111,7 +99,10 @@ try
             } else {
                 echo 'Client ID Booking Appointment Already Exist, Please book appointment for the next client';
             }
-         }
+               } catch (Exception $ex) {
+                   echo ($ex ->getMessage());
+               }
+    }
 ?></td>
            </table>  
        </form>

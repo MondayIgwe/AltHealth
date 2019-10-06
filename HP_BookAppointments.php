@@ -13,7 +13,7 @@
         <img src="images/logo.png" />
            <nav>
            <ul>
-               <li><a href="healthPractitioner.php">Back to: Health Practitioner</a></li>
+               <li><a href="healthPractitioner.php">Back</a></li>
                <li style="margin-left: 2em"><a target="_blank" title="follow me on Twitter" href="https://www.twitter.com/lifehealthcare"><img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border></a></li>
                <li style="margin-left: 2em"><a target="_blank" title="follow me on facebook" href="https://www.facebook.com/lifehealthcare"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a></li> 
                <li style="margin-left: 2em"><a target="_blank" title="follow me on youtube" href="https://www.youtube.com/lifehealthcare"><img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a></li>
@@ -99,12 +99,12 @@ try
             $appTime = $_POST['Time'];
 
             //INSERT Appointments INTO THE TABLE
-            $PDOquery = "INSERT INTO `bookinginfo`(`Appointment_Date`, `Client_id`, `Time`) 
-                            VALUES (:Appointment_Date,:Client_id,:Time)";
+            $PDOquery = "INSERT INTO `bookinginfo`(`Appointment_Date`, `Client_booking_id`, `Time`) 
+                            VALUES (:Appointment_Date,:Client_booking_id,:Time)";
 
             $PDOresult= $PDOdb->prepare($PDOquery);
 
-            $PDOExec = $PDOresult->execute(array(":Client_id"=>$clientID,":Appointment_Date"=>$appDate,":Time"=>$appTime));
+            $PDOExec = $PDOresult->execute(array(":Client_booking_id"=>$clientID,":Appointment_Date"=>$appDate,":Time"=>$appTime));
             if($PDOExec)
             {
               echo 'Booking Appointment for'.' '.$clientID.' '.'  '.'has been received!'.'&nbsp;&nbsp;';

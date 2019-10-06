@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyling.css">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body id="top" class="home page-template page-template-template-homepage page-template-template-homepage-php page page-id-93 woocommerce-no-js wpb-js-composer js-comp-ver-6.0.3 vc_responsive"> 
-    <center><h1>Welcome To Client Side</h1></center>
+    <center><h1>ABOUT US</h1></center>
     <center>
         <div class="header">
         <img src="images/logo.png" />
@@ -23,8 +26,7 @@
         <h1><span style="color: #003f8a;">AltHealth (LifeHealthCare) is a Healthcare with world class clinical equipments that Wins Patients 
                 trust and Enhances the lives of it patients.
               </span></h1>
-            <p>
-             
+    <p>        
     <div id="main" class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -33,9 +35,9 @@
                         <section class="post-entry">
                             <div class="vc_row wpb_row vc_row-fluid">
                               <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_revslider_element wpb_content_element">
-<div id="rev_slider_8_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <div id="rev_slider_8_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
 	<div id="rev_slider_8_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8.3">
-<ul>	<!-- SLIDE  -->
+        <ul>	<!-- SLIDE  -->
 	<li data-index="rs-27" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
 		<img src="https://ik.imagekit.io/healthcaresuccess/wp-content/uploads/home-partner-bkgd.jpg"  alt="" title="home-partner-bkgd"  width="1300" height="500" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
@@ -43,49 +45,44 @@
 			 id="home-partner" 
 			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
 			 data-y="['top','top','top','top']" data-voffset="['79','79','79','47']" 
-						data-fontsize="['60','60','50','32']"
-			data-lineheight="['72','72','62','44']"
-			data-width="none"
-			data-height="none"
-			data-whitespace="nowrap"
- 
-			data-type="text" 
-			data-responsive_offset="on" 
+                         data-fontsize="['60','60','50','32']"
+			 data-lineheight="['72','72','62','44']"
+			 data-width="none"
+			 data-height="none"
+			 data-whitespace="nowrap"
+			 data-type="text" 
+			 data-responsive_offset="on" 
+			 data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			 data-textAlign="['center','center','center','center']"
+			 data-paddingtop="[0,0,0,0]"
+			 data-paddingright="[0,0,0,0]"
+			 data-paddingbottom="[0,0,0,0]"
+			 data-paddingleft="[0,0,0,0]"
+			 style="z-index: 5; white-space: nowrap; font-size: 60px; line-height: 72px; font-weight: 700; color: #051c54; letter-spacing: 0px;font-family:.calluna;">Partner with a full-service<br> healthcare marketing agency<br> that delivers results. </div>
 
-			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-			data-textAlign="['center','center','center','center']"
-			data-paddingtop="[0,0,0,0]"
-			data-paddingright="[0,0,0,0]"
-			data-paddingbottom="[0,0,0,0]"
-			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 5; white-space: nowrap; font-size: 60px; line-height: 72px; font-weight: 700; color: #051c54; letter-spacing: 0px;font-family:.calluna;">Partner with a full-service<br> healthcare marketing agency<br> that delivers results. </div>
-
-		<!-- LAYER NR. 2 -->
-		<a class="tp-caption rev-btn   getquote btn-modal" 
- href="#getquote" target="_self"			 id="slide-27-layer-4" 
+		        <a class="tp-caption rev-btn   getquote btn-modal" 
+                         accesskey=""href="#getquote" target="_self"			 id="slide-27-layer-4" 
 			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
 			 data-y="['middle','middle','middle','middle']" data-voffset="['137','137','98','75']" 
-						data-width="none"
-			data-height="none"
-			data-whitespace="nowrap"
- 
-			data-type="button" 
-			data-actions=''
-			data-responsive_offset="on" 
-			data-responsive="off"
-			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(54,195,242);bg:rgb(36,59,125);bs:solid;bw:0 0 0 0;"}]'
-			data-textAlign="['inherit','inherit','inherit','inherit']"
-			data-paddingtop="[12,12,12,12]"
-			data-paddingright="[35,35,35,35]"
-			data-paddingbottom="[12,12,12,12]"
-			data-paddingleft="[35,35,35,35]"
-
+		         data-width="none"
+	 		 data-height="none"
+			 data-whitespace="nowrap"
+                         data-type="button" 
+			 data-actions=''
+			 data-responsive_offset="on" 
+			 data-responsive="off"
+			 data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(54,195,242);bg:rgb(36,59,125);bs:solid;bw:0 0 0 0;"}]'
+			 data-textAlign="['inherit','inherit','inherit','inherit']"
+			 data-paddingtop="[12,12,12,12]"
+			 data-paddingright="[35,35,35,35]"
+			 data-paddingbottom="[12,12,12,12]"
+			 data-paddingleft="[35,35,35,35]"
 			style="z-index: 6; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 700; color: #243b7d; letter-spacing: px;font-family:.museo-sans;background-color:rgb(54,195,242);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">Get Results Now </a>
-</li>
-</ul>
-<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
-<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+                        </li>
+                        </ul>
+                        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+                        <script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
 				if(htmlDiv) {
 					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
 				}else{
@@ -114,7 +111,7 @@ var revapi8,
 			dottedOverlay:"none",
 			delay:9000,
 			navigation: {
-				onHoverStop:"off",
+		        onHoverStop:"off",
 			},
 			responsiveLevels:[1240,1024,778,480],
 			visibilityLevels:[1240,1024,778,480],
@@ -140,10 +137,10 @@ var revapi8,
 				disableFocusListener:false,
 			}
 		});
-	}; /* END OF revapi call */
+	}; 
 	
- }; /* END OF ON LOAD FUNCTION */
-}()); /* END OF WRAPPING FUNCTION */
+ }; 
+}()); 
 </script>
 </div><!-- END REVOLUTION SLIDER --></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1476304999487 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1476305012332"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="specialty-copy wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1477334928019"><div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  vc_custom_1551978232797" >
@@ -179,7 +176,7 @@ We improve the lives of people by means of the delivery of high-quality, cost-ef
 Our values form the cornerstone of how we behave – they are the essence of our culture and the unifying beliefs that connect us.
 <h2><span style="color: #003f8a;">Our five core values</span></h2>
 <h4>Passion for people:</h4> Those that are the life of our business
-<h4>Qe:</h4><p> Quality to the power of 'e' (ethics, excellence, empowerment, empathy, energy)</p>
+<h4>Qe:</h4><p> Quality to the power of (ethics, excellence, empowerment, empathy, energy)</p>
 <h4>Performance pride:</h4>We act for the right reasons, with quality in mind
 <h4>Personal care:</h4> adding the human touch
 <h4>Lifetime partnerships:</h4> with our patients at the very centre
@@ -194,7 +191,7 @@ Thoughtfulness goes a long way, so we aim to leave a lasting impression of under
 Unit 495 The William Nicole & Broadacres<br />
 Johannesburg,<br />
 South Africa, 2001.<br />
-  </form>
+</form>
 </body>
 </html>
 

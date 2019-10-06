@@ -1,5 +1,3 @@
-              
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,15 +6,24 @@
     <link rel="stylesheet" href="cssStyling/invoiceStyling.css" media="all" />
     <link rel="icon" type="image/png" href="images/logo.png" >
   </head>
-  <body>
+   <body style="background:url(images/images.jpg)no-repeat; background-size:100%;"> 
+    <center><h1>Generated Invoice</h1></center>
+    <form action="generate_pdf.php" method="post">
     <header class="clearfix">
       <div id="logo">
         <img src="images/logo.png">
       </div>
+        <center>
+        <nav>
+           <ul>
+               <li style="margin-left: 2em"><a href="Invoice.php">Back</a></li>
+            </ul>
+        </nav>
+        </div>
       <div id="company">
         <h2 class="name">Life Health Care</h2>
         <div>20 William Nicole Drive, ZA</div>
-        <div>(+27) 519-0450</div>
+        <div>(+27) 519-0450)</div>
         <div><a href="mailto:company@example.com">lifehealthcare@life.co.za</a></div>
       </div>
       </div>
@@ -26,108 +33,50 @@
         <div id="client">
           <div class="to">INVOICE TO:</div>
           <div class="address">20 William Nicole Drive</div>
-        </div>
-          
-          
+        </div>  
         <div id="invoice">
           <h1>INVOICE </h1>
              <div class="date">Invoice Number:</div>
-          <div class="date">Date: 01/06/2019</div>
-       
+          <div class="date">Date: 01/11/2019</div>
         </div>
-      </div>  
+      </div>   
+        <!--Invoice Table Columns-->
       <table border="0" cellspacing="0" cellpadding="0">
         <thead>
           <tr>
-            <th class="no">ID_Numbers</th>
-            <th class="unit">CONSULTATION FEE</th>
-            <th class="desc">SUPPLEMENT NAME</th>
-            <th class="unit">PRICE</th>
-            <th class="qty">QUANTITY</th>
-            <th class="total">TOTAL</th>
+            <th class="no">Invoice Details</th>
           </tr>
         </thead>
+        <!--Invoice Client ID-->
         <tbody>
           <tr>
-              <td class="no"><h3>Client_id</h3><?php
-            try{
-                
-          
-        //Connect to Database server and select the database 
-            $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-            $username = 'root';
-            $password = '';
-            
-            $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>';
-
-              //Get ID number from Invoice                   
-                    $query = "SELECT * FROM invoice_info WHERE Client_id";
-                    $statement = $PDOdb->prepare($query);
-                    $statement->execute();
-                    $invoices = $statement->fetch(PDO::FETCH_ASSOC);
-                     echo '<br>'.$invoices['Client_id']; 
-                   } catch (Exception $ex) {
-                         $ex->getMessage();
-            }
-               
-?></h3></td>
-            <td class="desc"><h3><?php
-            try
-            {
+              <td class="no"><h3>Client_id</h3>
+       <?php 
+        try{
             //Connect to Database server and select the database 
-                $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-                $username = 'root';
-                $password = '';
-
-                $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>';
-                //Generate Invoice                   
-                    $query = "SELECT * FROM invoice_info WHERE Consultation";
-                    $statement = $PDOdb->prepare($query);
-                    $statement->execute();
-                    $invoices = $statement->fetch(PDO::FETCH_ASSOC);
-                     echo '<br>'.$invoices['Consultation']; 
-                   } catch (Exception $ex) {
-                         $ex->getMessage();
-            }
-               
-?></h3></td>
-            <td class="unit">N/A</td>
-            <td class="unit"><h3><?php
-            try{
-                
-          
-        //Connect to Database server and select the database 
-            $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-            $username = 'root';
-            $password = '';
-            
-            $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>';
-
-              //Generate Invoice                   
-                    $query = "SELECT * FROM invoice_info WHERE Consultation";
-                    $statement = $PDOdb->prepare($query);
-                    $statement->execute();
-                    $invoices = $statement->fetch(PDO::FETCH_ASSOC);
-                     echo '<br>'.$invoices['Consultation']; 
-                   } catch (Exception $ex) {
-                         $ex->getMessage();
-            }
-               
-?></h3></td>
-            <td class="qty">1</td>
-            <td class="total">300.00</td>
-
-                    
-          </tr>
-        </tbody>
+            require 'Connect_DB.php';
+                if (isset($_POST['submit'])){
+                        $table_fields=$_POST['Client_id'];
+                        $queryInvoice = $PDOdb->prepare("SELECT * FROM invoice_info WHERE client_id = $table_fields;");
+                        $queryInvoice->execute();
+                        while($invoices = $queryInvoice->fetch()){
+                             echo '<p style="text-align:left;">'.'Invoice Number:'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.$invoices['INVNUM'].'<br>'.
+                            '<p style="text-align:left;">'.'ID Numbers:'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.$invoices['Client_id'].'<br>'.
+                            '<p style="text-align:left;">'.'Consultation:'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.$invoices['Consultation'].'<br>'.
+                            '<p style="text-align:left;">'.'Total fee:'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.'&emsp;'.$invoices['Total'].'</p>';
+                             break;
+                        }    
+                }     
+          }catch(Exception $ex) {
+            $ex->getMessage();
+          }          
+       ?>
+      </tr>
+      </tbody>
       </table>
-      <div id="thanks">Thank you!</div>
+        <!--DOWNLOAD INVOICE TO PDF BUTTON-->
+        <div style="margin-left: 49em"><input type="submit" name="submit" value="download invoice"></div>
+         <div id="thanks">Thank you!</div>  
       <div id="notices">
         <div>NOTICE:</div>
         <div class="notice"> Invoice was created on a computer and is valid without the signature and seal. 

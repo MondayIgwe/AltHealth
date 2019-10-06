@@ -2,12 +2,13 @@
                 height: 400px;
                 border: 2px solid;
                 background-color: yellowgreen;
-                width: 1500px;
-                margin-left:70px;
+                width: 5000px; 
+                margin-right: 70px;
+                
                
             }
       button{
-                width: 1550px;
+                width: 900px;
                 color:black;
                 background: #337ab7;
                 margin-right:5%;
