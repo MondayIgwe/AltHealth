@@ -1,22 +1,21 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Client Login Page</title>
+        <title>HP/GA Edit Client Information</title>
         <link rel="stylesheet" type="text/css" href="cssStyling/registrationStyleSheet.css"> 
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyleSheet.css">  
     </head>
    <body style="background:url(images/doctors.jpg)no-repeat; background-size:100%;">
     <center>
-             <h1 style="background-color:hsl(9, 200%, 64%);"><b><li style="margin-left: 0em"><a href="index.php">Back</a></li></h1>
+        <h1 style="background-color:hsl(9, 200%, 64%);"><b><li style="margin-left: 0em"><a href="HP_ViewAppointments.php">Back</a></li></h1>
         <form  method="post">
-            <!--Capture New User Details and Store in the ClienData table in the Databse-->
           <table align="center" width="100">  
                 <tr>
-                    <th colspan="2"><h2 align="center" style="background-color:white;"><font size="6">New Client Login</font></h2></th>
+                    <th colspan="2"><h2 align="center" style="background-color:white;"><font size="6">Edit Client Information</font></h2></th>
                 </tr>
                 <tr><!--Capture User Details-->
                     <td><font size="4"><b>Enter SA ID:</b><br /></font></td>
-                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers" maxlength="13"  required /><br></td>
+                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers"  required /><br></td>
                 </tr>
                 <tr>
                     <td><font size="4"><b>Enter Name:</b><br /></font></td>
@@ -32,17 +31,17 @@
                 </tr>
                     <tr>
                         <td><font size="4"><b>Enter Suburb Code:</b><br /></font></td>
-                        <td><input type="tex" name="Code" maxlength="4" placeholder="code"/><br></td>
+                    <td><input type="text" name="Code" placeholder="code"/><br></td>
                 </tr>
                  </tr>
                     <tr>
                         <td><font size="4"><b>Enter Cell No:</b><br /></font></td>
-                        <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" maxlength="10" required/><br></td>
+                    <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" required/><br></td>
                 </tr>
                 </tr>
                     <tr>
                         <td><font size="4"><b>Enter Email:</b><br /></font></td>
-                        <td><input type="text" name="C_Email" placeholder="enter email"  required/><br></td>
+                    <td><input type="text" name="C_Email" placeholder="enter email" required/><br></td>
                 </tr>
                 </tr>
                  <tr>
@@ -74,10 +73,13 @@
                                                           
                             // Client Registration
                             if ($PDOExec)
-                                       //echo 'Client ID'.'  '.'  '.$ID.' '.'Successsfully registrered';
+                                       
                             {
-                                header('location:Client_ViewAppointments.php');
-                            } else {
+                                 echo '<script type="text/javascript">';
+                                 echo ' alert("Client ID'.'  '.'  '.$ID.' '.'Client Information has Successsfully updated")';
+                                 echo '</script>';
+                                //header('location:Client_ViewAppointments.php');
+                           } else {
                                echo '<script type="text/javascript">';
                                 echo ' alert("Client ID Number Already Exist, Please log in as an Existing User")';
                                  echo '</script>';
@@ -92,10 +94,6 @@
         </form>
          </center>
     </body>
-    <br />
-    <br />
-    <br />
-    <br />
     <center>
 <div>
    <b><p style="text-align:bottom;">Copyright &#169; 2019 Life Health Care. All rights reserved.</p></b>

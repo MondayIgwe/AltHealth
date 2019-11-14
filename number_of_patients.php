@@ -1,12 +1,6 @@
 <?php
          //Connect to Database server and select the database 
-            $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-            $username = 'root';
-            $password = '';
-            $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>'; 
-                
+            require 'Connect_DB.php'; 
                 //Select Client Invoices
                 if(isset($_POST["searchPatients"]))
                 {

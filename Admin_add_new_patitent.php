@@ -6,9 +6,9 @@
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyleSheet.css">  
     </head>
     <body style="background:url(images/doctors.jpg)no-repeat; background-size:100%;">
-        <form  method="post">
+        <form  method="post">    
             <center>
-                <li><a href="healthPractitioner.php">Back</a></li>
+                <h1 style="background-color:tomato;"><li style="margin-left: 2em"><a href="healthPractitioner.php">Back</a></li></h1> 
              </center>
             <table align="center">
                 <tr>
@@ -16,7 +16,7 @@
                 </tr>
                 <tr><!--Capture User Details-->
                     <td><b>Enter SA ID:</b><br /></td>
-                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers"  required /><br></td>
+                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers" maxlength="13"  required /><br></td>
                 </tr>
                 <tr>
                     <td><b>Enter Name:</b><br /></td>
@@ -32,12 +32,12 @@
                 </tr>
                     <tr>
                     <td><b>Enter Suburb Code:</b><br /></td>
-                    <td><input type="text" name="Code" placeholder="code"/><br></td>
+                    <td><input type="text" name="Code" placeholder="code" maxlength="4"/><br></td>
                 </tr>
                  </tr>
                     <tr>
                     <td><b>Enter Cell No:</b><br /></td>
-                    <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" required/><br></td>
+                    <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" maxlength="10" required/><br></td>
                 </tr>
                 </tr>
                     <tr>
@@ -51,6 +51,7 @@
                 </tr>
                 <td align="right" colspan="2"><input type="submit" name="Admin_addnewPatient" value="login" /></td>
                 <td><?php
+                        session_start();
                     try {
                         require_once 'Connect_DB.php';
                         
@@ -85,4 +86,15 @@
             </table>
         </form>
     </body>
+     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+<div>
+   <b><p style="text-align:bottom;">Copyright &#169; 2019 Life Health Care. All rights reserved.</p></b>
+ </div>
+</center>
 </html>

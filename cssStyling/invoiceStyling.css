@@ -88,24 +88,18 @@ h2.name {
 table {
   width: 100%;
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 1px;
   margin-bottom: 20px;
-}
-
-table th,
-table td {
-  padding: 20px;
-  background: #EEEEEE;
-  text-align: center;
   border-bottom: 1px solid #FFFFFF;
+  text-align: center;
 }
-
-table th {
-  white-space: nowrap;        
-  font-weight: normal;
-}
-
-table td {
+ th{ padding: 20px;
+    background: #EEEEEE;
+    text-align: center;
+ }
+ 
+ 
+td {
   text-align: right;
 }
 

@@ -18,8 +18,8 @@
 table{
     border-collapse: collapse;
     border-collapse:separate; 
-    border-spacing: 10px 1rem;
-    width:150px;
+    border-spacing: 10px;
+    width:50px;
     padding:5px;
     color: #588c7e;
     border:2px solid black;   

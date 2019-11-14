@@ -2,47 +2,42 @@
 <html>
     <head>
         <title>Reports</title>
-        <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="icon" type="image/png" href="images/logo.png" >
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="cssStyling/css_sticky_social_bar.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyling.css"> 
-        <link rel="stylesheet" type="text/css" href="cssStyling/ReportCSSS.css"> 
-        <link rel="icon" type="image/png" href="images/logo.png" >
+        <link rel="stylesheet" type="text/css" href="cssStyling/ReportCSSS.css">    
         <link rel="stylesheet" type="text/css" href="cssStyling/healthPractitionerStyleSheet.css">  
     </head>
+         <h1 align="center">Day to Day Reports</h1><br> 
     <body style="background:url(images/clinic.jpg)no-repeat; background-size:100%;">
         <form action="Day_To_Day_Reporting.php" method="post">
         <center>
         <div class="header">
-        <img src="images/logo.png" />
+         <img src="images/logo.png" class="img-circle" alt="Cinque Terre" width="100" height="100">
            <nav>
            <ul>
-               <li style="margin-left: 2em"><a href="Contact.php">Contact Us</a></li> 
-               <li style="margin-left: 2em"><a href="HP_ViewAppointments.php">Back to:    HCP_ViewAppointments</a></li>
-               <li style="margin-left: 2em"><a href="healthPractitioner.php">Back to: Health Practitioner</a></li>
-               <li style="margin-left: 7em"><a target="_blank" title="follow me on Twitter" href="https://www.twitter.com/lifehealthcare"><img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border></a></li>
-               <li style="margin-left: 2em"><a target="_blank" title="follow me on facebook" href="https://www.facebook.com/lifehealthcare"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a></li> 
-               <li style="margin-right: -5em"><a target="_blank" title="follow me on youtube" href="https://www.youtube.com/lifehealthcare"><img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a></li>
-               <li style="margin-right: -15em"><a target="_blank" title="follow me on instagram" href="https://www.instagram.com/lifehealthcare"><img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a></li> 
+               <object width="200" height="200" align="center" data="helloworld.swf"><li style="margin-left: 2em"><b><a href="Generate_reports.php">Back</a></b></li></object>
+            <div class="icon-bar">
+                 <object width="200" height="200" align="center" data="helloworld.swf"><li style="margin-left: 2em"><a target="_blank" title="follow me on Twitter" href="https://www.twitter.com/lifehealthcare"><img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border></a></li></a></object>
+                 <object width="200" height="200" align="center" data="helloworld.swf"><li style="margin-left: 2em"><a target="_blank" title="follow me on facebook" href="https://www.facebook.com/lifehealthcare"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a></li></object> 
+                 <object width="200" height="200" align="center" data="helloworld.swf"><li style="margin-left: 2em"><a target="_blank" title="follow me on youtube" href="https://www.youtube.com/lifehealthcare"><img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a></li></object>
+                 <object width="200" height="200" align="center" data="helloworld.swf"><li style="margin-left: 2em"><a target="_blank" title="follow me on instagram" href="https://www.instagram.com/lifehealthcare"><img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a></li></object>
+            </div> 
+               <object width="200" height="200" align="center" data="helloworld.swf"><li style="margin-left: 2em"><b><a href="index.php">Log out</a></b></li></object>
+                 
            </ul>
         </nav>
-       </div>
+       </div>     
     <table align="center"> 
-            <h1 align="center">Day to Day Report</h1><br> 
-            
-                <button><input type="submit" name="report" value="Client Report informations"/></button>
-                <button><input type="submit" name="searchSupplements" value="Product information and stock levels"/></button> 
-         
-                         
-           <?php
+           <button><input type="submit" name="report" value="Client Report information"/></button>
+            <button><input type="submit" name="searchSupplements" value="Product information and stock levels"/></button></font>              
+            <?php
+             session_start();
             //Connect to Database server and select the database 
-                $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-                $username = 'root';
-                $password = '';
-                 $PDOdb = new PDO($dbhost, $username, $password);
-                    echo '<br>';
-                    echo '<br>'; 
-         
+            require 'Connect_DB.php'; 
                 if(isset($_POST["report"]))
                 {
                         
@@ -70,22 +65,12 @@
                                $appointments ['C_name']."</td><td>".
                                $appointments['C_surname']."</td><td>".
                                $appointments['Address']."</td><td>".
-                               $appointments['code']."</td></tr>";
-                      
-                        
-                }}
-                
-    ?>
-   
+                               $appointments['code']."</td></tr>";          
+                }}        
+   ?>
    <?php
          //Connect to Database server and select the database 
-            $dbhost = 'mysql:host=localhost; dbname=lifehealthcare';
-            $username = 'root';
-            $password = '';
-            $PDOdb = new PDO($dbhost, $username, $password);
-                echo '<br>';
-                echo '<br>'; 
-                
+             require 'Connect_DB.php';    
                 //Select Supplements
                 if(isset($_POST["searchSupplements"]))
                 {
@@ -111,12 +96,21 @@
                               .' '.$filterReport['Stock_levels']."</td></tr>";
                         }
                 }
-?>
+     ?>
       </center>
       </table>
       </form>  
-
     </body>
-  
+       <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />  
+    <center>
+<div>
+   <b><p style="text-align:bottom;">Copyright &#169; 2019 Life Health Care. All rights reserved.</p></b>
+ </div>
+</center>
 </html>
 

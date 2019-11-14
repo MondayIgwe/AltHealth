@@ -13,35 +13,28 @@
     </head>
     <body style="background:url(images/doctors.jpg)no-repeat; background-size:100%;">
         <center>
-           <h1 style="background-color:hsl(9, 200%, 64%);"><b><li style="margin-left: 0em"><a href="index.php">Back</a></li></h1>
-    </center>
+             <h1 style="background-color:hsl(9, 200%, 64%);"><b><li style="margin-left: 0em"><a href="index.php">Back</a></li></h1>
+        </center>
         <form method="post"> 
            <table align="center">
-               <th colspan="5"><h2 align="center"><b>Administrator User Login</h2></b></th> 
+               <th colspan="5"><h2 align="center" style="background-color:white;"><b>Existing User Login</b></h2></th> 
                  <tr>
-                     <td><font size="4"><b>Username:</b><br /></font></td>
-                   <td><input type="text" name="user" placeholder="Enter admin user name" required/><br></td>
+                     <td><font size="5"><b>Enter ID No:</b></font><br /></td>
+                     <td><input type="text" name="id" placeholder="please enter ID" maxlength="13"required/><br></td>
                 </tr>
-                <tr>
-                    <td><font size="4"><b>Password:</b><br /></font></td>
-                   <td><input type="password" name="pass" required/><br /></td>
-                </tr>
-                <tr>
                     <td align="right" colspan="2"><input type="submit" name="login" value="login" required/></td>
                     <td>
                 <?php
                      session_start();
                         try
                         {
-                            //Connect to Life Health Database
+                            //Connect to the lIFE HEALTH DATABASE
                             require_once 'Connect_DB.php';
-
                             //Query the database for user
                             if(isset($_POST['login'])){
-                                $user = $_POST['user'];
-                                $pass = $_POST['pass'];
+                                $id = $_POST['id'];
 
-                                $query = "SELECT * FROM `admin_login` WHERE username = '$user' and password = '$pass'";
+                                $query = "SELECT * FROM `clientdata` WHERE Client_id = '$id'";
                                 $statement = $PDOdb->prepare($query);
                                 $statement->execute();
                                 $login = $statement->fetch(PDO::FETCH_ASSOC);
@@ -50,21 +43,21 @@
                                 if($login !=null){
                                     session_start();
                                     $_SESSION['auth']= 'true';
-                                    header('location:healthPractitioner.php');
+                                    header('location:Client_ViewAppointments.php');
                                 } else {
-                                      echo '<script type="text/javascript">';
-                                      echo ' alert("Invalid Administrator Password")';
-                                      echo '</script>';
+                                        echo '<script type="text/javascript">';
+                                        echo ' alert("Client ID NOT found, Please Register as a  New User")';
+                                        echo '</script>';
                                 }
-                        } }catch (Exception $ex) {
-                                $ex->getMessage(); }
+                        }}catch (Exception $ex) {
+                           $ex->getMessage(); }
                     ?>
                     </td>
                 </tr>
            </table>
        </form>
     </body>
-    <br />
+        <br />
     <br />
     <br />
     <br />
