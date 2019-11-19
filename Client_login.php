@@ -4,6 +4,21 @@
         <title>Client Login Page</title>
         <link rel="stylesheet" type="text/css" href="cssStyling/registrationStyleSheet.css"> 
         <link rel="stylesheet" type="text/css" href="cssStyling/logoStyleSheet.css">  
+<!--        <script type="text/javascript">
+            function Zipcode(){
+                var str= document.getElementById("zipcode").value;
+                var zipcodeAlert= document.getElementById("zipcode-alert");
+                if(!((/^[0-9]{6}$/.test(str) ))){
+                    zipcodeAlert.style.display="block";
+                    zipcodeAlert.innerHTML="Zip Code Must Be 4 Digits";
+                    zipcodeFlag=false;
+                }else{
+                    zipcodeAlert.style.display="none";
+                    zipcodeFlag=true;
+                }
+            }
+            
+        </script>-->
     </head>
    <body style="background:url(images/doctors.jpg)no-repeat; background-size:100%;">
     <center>
@@ -32,7 +47,9 @@
                 </tr>
                     <tr>
                         <td><font size="4"><b>Enter Suburb Code:</b><br /></font></td>
-                        <td><input type="tex" name="Code" maxlength="4" placeholder="code"/><br></td>
+                        <td><input type="tex" name="Code" maxlength="4" placeholder="Zip code"/><br>
+                           </td>
+                        
                 </tr>
                  </tr>
                     <tr>
@@ -50,8 +67,9 @@
                     <td><textarea name="C_Reference" cols="20" rows="5" placeholder="word of mouth or Website" aria-invalid="false"/></textarea><br></td>
                 </tr>
                 <td align="right" colspan="2"><input type="submit" name="Client_login" value="login" /></td>
-                <td><?php
-                    try {
+                <td>
+                 <td><?php
+                   try {
                         require_once 'Connect_DB.php';
                         
                         //Query the database for user Login

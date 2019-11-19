@@ -18,4 +18,3 @@ try
         echo "Message could not be sent";
     }
 ?>
-

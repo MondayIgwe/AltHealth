@@ -15,7 +15,9 @@
   </head>
    <body> 
     <center><h1>Generated Invoice</h1></center>
-    <form action="Email_Client.php" method="post" target="_blank">
+    
+
+   <form action="Email_Client.php" method="post" target="_blank">
     <header class="clearfix">
       <div id="logo">
         <img src="images/logo.png" class="img-circle" alt="Cinque Terre" width="100" height="100">
@@ -92,15 +94,17 @@
             $ex->getMessage();
           }          
        ?>
-      </tr>
+     </tr>
       </tbody>
       </table>
-    
-        
-        <!--EMAIL INVOICE TO PDF BUTTON-->
-        <div style="margin-left: 34em"><input type="submit" name="submit" value="Email invoice"></div>
-       
-
+        <table>
+              <!--EMAIL INVOICE TO PDF BUTTON-->
+              <td><div style="margin-left: 28em"><b><input type="submit" name="submit" value="Email invoice"></b></div></form></td>
+             
+              <!--DOWNLOAD INVOICE-->
+              <form action="generate_pdf.php" method="post" target="_blank">
+                  <td><div style="margin-left: 0em"><input type="submit" name="submit" value="Download Invoice"></form></div></td>
+                </table>
         <!-- BANKING DETAILS FOR INVOICE PAYMENTS-->
         <div><h1><font color="blue">Banking Details:</h1>
              <p>ACCOUNT NAME: LIFE HEALTH CARE</p>
@@ -114,6 +118,8 @@
         <div>NOTICE:</div>
         <div class="notice"> Invoice was created on a computer and is valid without the signature and seal. 
     </main>
+      
+    
   </body>
   <center>
 <div>
