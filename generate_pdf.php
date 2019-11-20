@@ -20,7 +20,7 @@ $pdf->Cell(100,10,"(+27) 519-0450",1,1);
 //CONNECT TO DATABASE
 require_once 'Connect_DB.php';
 
-$queryInvoice = $PDOdb->prepare("SELECT * FROM invoice_info WHERE Client_id ORDER BY Client_id;");
+$queryInvoice = $PDOdb->prepare("SELECT * FROM invoice_info WHERE Client_id");
 $queryInvoice->execute();
 $invoices = $queryInvoice->fetch();
 

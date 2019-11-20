@@ -16,7 +16,7 @@
                 </tr>
                 <tr><!--Capture User Details-->
                     <td><b>Enter SA ID:</b><br /></td>
-                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers" maxlength="13"  required /><br></td>
+                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers" minlength="13" maxlength="13"  required /><br></td>
                 </tr>
                 <tr>
                     <td><b>Enter Name:</b><br /></td>
@@ -32,12 +32,12 @@
                 </tr>
                     <tr>
                     <td><b>Enter Suburb Code:</b><br /></td>
-                    <td><input type="text" name="Code" placeholder="code" maxlength="4"/><br></td>
+                    <td><input type="text" name="Code" placeholder="code" minlength="4" maxlength="4"/><br></td>
                 </tr>
                  </tr>
                     <tr>
                     <td><b>Enter Cell No:</b><br /></td>
-                    <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" maxlength="10" required/><br></td>
+                    <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" minlength="10" maxlength="10" required/><br></td>
                 </tr>
                 </tr>
                     <tr>
@@ -47,7 +47,7 @@
                 </tr>
                  <tr>
                     <td><b>Enter Reference:</b><br /></td>
-                    <td><textarea name="C_Reference" cols="20" rows="5" placeholder="word of mouth or Website" aria-invalid="false"/></textarea><br></td>
+                    <td><textarea name="C_Reference" cols="20" rows="5" placeholder="How did you hear about Us, word of mouth or Website" aria-invalid="false"/></textarea><br></td>
                 </tr>
                 <td align="right" colspan="2"><input type="submit" name="Admin_addnewPatient" value="login" /></td>
                 <td><?php

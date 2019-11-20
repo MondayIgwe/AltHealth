@@ -103,7 +103,7 @@
              
               <!--DOWNLOAD INVOICE-->
               <form action="generate_pdf.php" method="post" target="_blank">
-                  <td><div style="margin-left: 0em"><input type="submit" name="submit" value="Download Invoice"></form></div></td>
+                  <td><div style="margin-left:0em"><input type="submit" name="submit" value="Download Invoice"></form></div></td>
                 </table>
         <!-- BANKING DETAILS FOR INVOICE PAYMENTS-->
         <div><h1><font color="blue">Banking Details:</h1>

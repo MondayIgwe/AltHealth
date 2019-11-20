@@ -24,14 +24,14 @@
     <center>
              <h1 style="background-color:hsl(9, 200%, 64%);"><b><li style="margin-left: 0em"><a href="index.php">Back</a></li></h1>
         <form  method="post">
-            <!--Capture New User Details and Store in the ClienData table in the Databse-->
+            <!--Capture New User Details and Store in the ClienData table in the Database-->
           <table align="center" width="100">  
                 <tr>
                     <th colspan="2"><h2 align="center" style="background-color:white;"><font size="6">New Client Login</font></h2></th>
                 </tr>
                 <tr><!--Capture User Details-->
                     <td><font size="4"><b>Enter SA ID:</b><br /></font></td>
-                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers" maxlength="13"  required /><br></td>
+                    <td><input type="text" name="Client_id" placeholder="SA Identification Numbers" minlength="13" maxlength="13"  required /><br></td>
                 </tr>
                 <tr>
                     <td><font size="4"><b>Enter Name:</b><br /></font></td>
@@ -47,14 +47,14 @@
                 </tr>
                     <tr>
                         <td><font size="4"><b>Enter Suburb Code:</b><br /></font></td>
-                        <td><input type="tex" name="Code" maxlength="4" placeholder="Zip code"/><br>
+                        <td><input type="tex" name="Code" minlength="4" maxlength="4" placeholder="Zip code"/><br>
                            </td>
                         
                 </tr>
                  </tr>
                     <tr>
                         <td><font size="4"><b>Enter Cell No:</b><br /></font></td>
-                        <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" maxlength="10" required/><br></td>
+                        <td><input type="text" name="C_Tel_Cell" placeholder="valid phone numbers" minlength="10" maxlength="10" required/><br></td>
                 </tr>
                 </tr>
                     <tr>
@@ -64,7 +64,7 @@
                 </tr>
                  <tr>
                      <td><font size="4"><b>Enter Reference:</b><br /></font></td>
-                    <td><textarea name="C_Reference" cols="20" rows="5" placeholder="word of mouth or Website" aria-invalid="false"/></textarea><br></td>
+                    <td><textarea name="C_Reference" cols="20" rows="5" placeholder="How did you hear about Us, word of mouth or Website" aria-invalid="false"/></textarea><br></td>
                 </tr>
                 <td align="right" colspan="2"><input type="submit" name="Client_login" value="login" /></td>
                 <td>
